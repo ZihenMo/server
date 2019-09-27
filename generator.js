@@ -7,25 +7,26 @@ var faker = require('faker');
 var _ = require('lodash');
 module.exports = function() {
 
-    // 设置地区
-    faker.locale = "zh_CN";
+// 设置地区
+faker.locale = "zh_CN";
 
-    return {
-        user: _.times(10, (index) => {
-            return {
-                id: index,
-                nickName: faker.name.findName(),
-                email: faker.internet.email(),
-                avatar: faker.image.avatar()
-            }
-        }),
-        news: _.times(100, (index) => {
-           return {
-               id: index,
-               title: faker.name.title(),
-               content: faker.random.words(),
-               image: faker.image.imageUrl()
-           }
-        })
-    }
+return {
+    user: _.times(10, (index) => {
+        return {
+            uid: faker.id,
+            nickName: faker.name.findName(),
+            email: faker.internet.email(),
+            avatar: faker.image.avatar(),
+            description: faker.lorem.paragraph()
+        }
+    }),
+    news: _.times(100, (index) => {
+        return {
+            id: index,
+            title: faker.name.title(),
+            content: faker.random.words(),
+            image: faker.image.imageUrl()
+        }
+    })
+}
 };
