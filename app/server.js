@@ -11,6 +11,7 @@ server.use(middleware);
 function isAuthorized(req) {
     console.log("当前请求:" + req.url);
     // console.log(req);
+    console.log("rules:" + rules)
     for (const key in rules) {
         console.log(key);
         if (req.url.startsWith(key) || req.url === '/user') {

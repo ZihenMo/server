@@ -3,7 +3,7 @@
 */
 
 const faker = require('faker');
-const user_generator = require('./users.js')
+const user_generator = require('./user.js')
 // 一个JS语言工具库
 const _ = require('lodash');
 module.exports = function () {
