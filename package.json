@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "json-server --watch app/generator.js --routes app/router.js",
-    "mock": "node app/server.js",
+    "mock": "nodemon app/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "mozihen",
@@ -13,7 +13,8 @@
   "dependencies": {
     "faker": "^4.1.0",
     "lodash": "^4.17.15",
-    "mockjs": "^1.1.0"
+    "mockjs": "^1.1.0",
+    "nodemon": "^2.0.6"
   },
   "devDependencies": {
     "json-server": "^0.15.0"
