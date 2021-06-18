@@ -11,6 +11,6 @@ module.exports = function () {
         signature: mock.Random.paragraph(1, 5),
         avatar: mock.Random.image('100x100'),
         job: faker.name.jobDescriptor(),
-        gender:  faker.name.gender()
+        gender:  faker.random.number() % 2
     }
 };

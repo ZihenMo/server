@@ -4,6 +4,7 @@
 
 const faker = require('faker');
 const user_generator = require('./user.js')
+const product_generator = require('./products')
 // 一个JS语言工具库
 const _ = require('lodash');
 module.exports = function () {
@@ -20,6 +21,9 @@ module.exports = function () {
                 content: faker.random.words(),
                 image: faker.image.imageUrl()
             }
+        }),
+        products: _.times(10, (index) => {
+            return product_generator();
         })
     }
 };

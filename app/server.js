@@ -14,7 +14,7 @@ function isAuthorized(req) {
     console.log("rules:" + rules)
     for (const key in rules) {
         console.log(key);
-        if (req.url.startsWith(key) || req.url === '/user') {
+        if (req.url.startsWith(key) || req.url === '/user') { // 在控制列表中授权访问
             return true;
         }
     }
